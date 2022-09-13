@@ -7,3 +7,36 @@ header {
     text-align: center;
     font-size: xx-large;
 }
+
+body {
+    margin: 0;
+}
+
+.gameBoard {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+footer  {
+    position: fixed;
+    background-color: darkgray;
+    text-align: center;
+    font-size: xx-large;
+    bottom: 0;
+}

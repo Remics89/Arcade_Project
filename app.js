@@ -1,32 +1,37 @@
-
-let game = {
-    flatBoard: initialState(),
-    initialBuilder: buildBoard(this.flatBoard),
+let gameStart = {
+    playerCount: modeSelection(),
+    playerName: players(),
+    gameBoard: buildBoard(),
 };
 
-function initialState() {
-    let board = [
-        [null, null, null],
-        [null, null, null],
-        [null, null, null],
-    ];
-    console.log(board);
-    return board;
+function modeSelection() {
+    let div = document.createElement("div");
+    let playerInput = document.createElement("input");
+    let body = document.querySelector("body");
+    div.style = `
+        opacity: 1;
+        transition-duration: 20s;
+        transition-property: opacity;
+        `;
 }
 
-function buildBoard(nestedAr) {
-    console.log(nestedAr)
-    let div = document.createElement('div');
-    let table = document.getElementsByTagName('table');
-    for (let i = 0; i < nestedAr.length; i++)   {
-        let innerArray = nestedAr[i];
+function players() {}
+
+function buildBoard() {
+    let board = [null, null, null, null, null, null, null, null, null];
+    let table = document.createElement("table");
+    document.body.appendChild(table)[-1];
+    table.className = "gameBoard";
+    table.id = 'fader';
+    for (let i = 0; i < board.length; i++) {
+        let div = document.createElement("div");
+        div.className = "cell";
         table.appendChild(div);
-        for (let a = 0; a < innerArray.length; a++) {
-            let element = innerArray[a];
-            
-        }
+        div.innerText = "X";
     }
 
+    table.style = `opacity: 1;
+    transition-duration: 10s;
+    transition-property: opacity;`
+
 }
-
-

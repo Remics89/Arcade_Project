@@ -1,0 +1,9 @@
+* {
+    font-family: monospace;
+}
+
+header {
+    background-color: darkgray;
+    text-align: center;
+    font-size: xx-large;
+}

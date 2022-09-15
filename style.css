@@ -50,9 +50,15 @@ select {
     margin-top: 10px;
 }
 
+#reset  {
+    margin-top: 10px;
+}
+
 .gameBoard {
+    margin-top: 0;
     width: 100vw;
     height: 100vh;
+    position: sticky;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -74,4 +80,22 @@ footer {
     left: 0;
     right: 0;
 }
+
+.gameBoard :nth-child(1), .gameBoard :nth-child(2), .gameBoard :nth-child(3)   {
+    border-bottom: 2px solid black;
+}
+
+.gameBoard :nth-child(1), .gameBoard :nth-child(4), .gameBoard :nth-child(7){
+    border-right: 2px solid black
+}
+
+.gameBoard :nth-child(3), .gameBoard :nth-child(6), .gameBoard :nth-child(9)  {
+    border-left: 2px solid black;
+}
+
+.gameBoard :nth-child(7), .gameBoard :nth-child(8), .gameBoard :nth-child(9)  {
+    border-top: 2px solid black;
+}
+
+
 

@@ -10,6 +10,7 @@ header {
 
 body {
     margin: 0;
+    align-items: center;
 }
 
 #progress {
@@ -55,10 +56,7 @@ select {
 }
 
 .gameBoard {
-    margin-top: 0;
-    width: 100vw;
-    height: 100vh;
-    position: sticky;
+    margin-top: 10vh;
     display: grid;
     justify-content: center;
     align-content: center;

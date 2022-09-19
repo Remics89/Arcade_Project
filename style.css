@@ -19,15 +19,15 @@ body {
     border: 3px solid rgb(28, 181, 219);
     align-items: center;
     text-align: center;
-    font-size: large
+    font-size: large;
 }
 
 select {
-    width: 6vw;
-    height: 3vh;
+    width: 50px;
+    height: 30px;
 }
 
-#player-names   {
+#player-names {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,22 +36,22 @@ select {
     padding: 2vh;
 }
 
-#inputbox1 #inputbox2   {
+#inputbox1 #inputbox2 {
     margin: 1vh;
     padding: 3px;
     text-align: center;
     width: 30vw;
 }
 
-#inputbox1   {
+#inputbox1 {
     margin: 1vh;
 }
 
-#submitNames    {
+#submitNames {
     margin-top: 10px;
 }
 
-#reset  {
+#reset {
     margin-top: 10px;
 }
 
@@ -61,6 +61,17 @@ select {
     justify-content: center;
     align-content: center;
     grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 35px;
 }
 
 footer img {
@@ -79,21 +90,26 @@ footer {
     right: 0;
 }
 
-.gameBoard :nth-child(1), .gameBoard :nth-child(2), .gameBoard :nth-child(3)   {
+.gameBoard :nth-child(1),
+.gameBoard :nth-child(2),
+.gameBoard :nth-child(3) {
     border-bottom: 2px solid black;
 }
 
-.gameBoard :nth-child(1), .gameBoard :nth-child(4), .gameBoard :nth-child(7){
-    border-right: 2px solid black
+.gameBoard :nth-child(1),
+.gameBoard :nth-child(4),
+.gameBoard :nth-child(7) {
+    border-right: 2px solid black;
 }
 
-.gameBoard :nth-child(3), .gameBoard :nth-child(6), .gameBoard :nth-child(9)  {
+.gameBoard :nth-child(3),
+.gameBoard :nth-child(6),
+.gameBoard :nth-child(9) {
     border-left: 2px solid black;
 }
 
-.gameBoard :nth-child(7), .gameBoard :nth-child(8), .gameBoard :nth-child(9)  {
+.gameBoard :nth-child(7),
+.gameBoard :nth-child(8),
+.gameBoard :nth-child(9) {
     border-top: 2px solid black;
 }
-
-
-

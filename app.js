@@ -16,7 +16,7 @@ function buildInitialState() {
     selectTag.hidden = false;
     selectTag.selectedIndex = 0;
 
-    const dropDialog = document.querySelector('#dropdownDialog')
+    const dropDialog = document.querySelector("#dropdownDialog");
     dropDialog.hidden = false;
 
     state.players = ["X", "O"];
@@ -121,7 +121,7 @@ function dialog() {
     dialogBox.innerText = `X: ${state.player1} O: ${state.player2}`;
 }
 
-function dialogStart()  {
+function dialogStart() {
     const dialogBox = document.querySelector("#dialogBox");
     dialogBox.hidden = true;
 }
@@ -256,15 +256,16 @@ function winningCombination() {
     return null;
 }
 
-function computerPlay() {
-    console.log("it gets to the computer function");
-    for (let i = 0; i < gameBoardElement.children.length; i++) {
-        if (!gameBoard.children[i].innerText) {
-            gameBoard.children.click();
-            return;
-        }
-    }
-}
+// function computerPlay() {
+//     while (state.gameBoard === true && state.turn % 2 === 1) {
+//         let click;
+//         function clickFunc(){
+//             click = gameBoardElement.click();
+//         }
+        
+//         setInterval(clickFunc, 5000)
+//     }
+// }
 
 /* **********************************    EVENT LISTENING    *************************************** */
 
@@ -305,8 +306,14 @@ document
     });
 
 gameBoardElement.addEventListener("click", function (event) {
-    const dialogBox = document.querySelector("#dialogBox");
+    gameCheck(event);
+    // computerPlay();
+});
 
+/* ************************************    EVENT FUNCTIONS    ***************************************** */
+
+function gameCheck(event) {
+    const dialogBox = document.querySelector("#dialogBox");
     if (winningCombination() !== null) {
         dialogBox.innerText = `Player ${winningCombination()} is the winner!`;
         state.resetButton = true;
@@ -349,6 +356,9 @@ gameBoardElement.addEventListener("click", function (event) {
             enableReset();
             // render();
         } else if (winningCombination() === null) {
+            // if (state.player2 === "Computer") {
+            //     console.log("computer has made a move");
+            // }
             let move = "O";
             state.turn = state.turn + 1;
             event.target.innerText = move;
@@ -360,15 +370,12 @@ gameBoardElement.addEventListener("click", function (event) {
             }
         }
     }
-});
-
-/* ************************************    EVENT FUNCTIONS    ***************************************** */
-
+}
 function reset() {
-    const inputs = document.getElementById('player-names');
+    const inputs = document.getElementById("player-names");
     inputs.hidden = false;
 
-    const resetB = document.getElementById('reset');
+    const resetB = document.getElementById("reset");
     resetB.hidden = true;
     dialogStart();
     buildInitialState();

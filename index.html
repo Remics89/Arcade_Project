@@ -5,21 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
-        <link rel="" href="" />
         <script src="app.js" defer></script>
         <title>Tic-Tac-Toe</title>
     </head>
     <body>
         <header>Tic Tac Toe</header>
         <div id="progress">
-            <span>How Many Players are playing?</span>
-            <select>
+            <span id="dropdownDialog">How many players are playing?</span>
+            <select id="dropdown">
                 <option id="emptyoption"></option>
                 <option id="option1">1</option>
                 <option id="option2">2</option>
             </select>
         </div>
-        <table></table>
+        <table class="gameBoard"></table>
         <footer>
             <img src="images/FSA.png" />
             This Game Developed by Matthew Szekeres
